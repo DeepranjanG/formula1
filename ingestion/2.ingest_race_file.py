@@ -64,7 +64,7 @@ display(races_selected_df)
 
 # COMMAND ----------
 
-races_selected_df.write.mode('append').parquet('/mnt/saformuladl/processed/races')
+races_selected_df.write.mode('overwrite').partitionBy('race_year').parquet('/mnt/saformuladl/processed/races')
 
 # COMMAND ----------
 
