@@ -11,7 +11,7 @@ from pyspark.sql.types import StructType, StructField, StringType, IntegerType, 
 results_schema = StructType([StructField("resultId", IntegerType(), False), \
                           StructField("raceId", IntegerType(), False), \
                           StructField("driverId", IntegerType(), False), \
-                          StructField("constructId", IntegerType(), False), \
+                          StructField("constructorId", IntegerType(), False), \
                           StructField("number", IntegerType(), True), \
                           StructField("grid", IntegerType(), False), \
                           StructField("position", IntegerType(), True), \
@@ -24,7 +24,7 @@ results_schema = StructType([StructField("resultId", IntegerType(), False), \
                           StructField("fastestLap", IntegerType(), True), \
                           StructField("rank", IntegerType(), True), \
                           StructField("fastestLapTime", StringType(), True), \
-                          StructField("fastestlapSpeed", StringType(), True), \
+                          StructField("fastestlapSpeed", FloatType(), True), \
                           StructField("statusId", IntegerType(), False)])
 
 # COMMAND ----------
@@ -48,7 +48,7 @@ from pyspark.sql.functions import current_timestamp
 results_renamed_df = results_df.withColumnRenamed('resultId', 'result_id') \
                                 .withColumnRenamed('raceId', 'race_id') \
                                 .withColumnRenamed('driverId', 'driver_id') \
-                                .withColumnRenamed('constructId', 'constructor_id') \
+                                .withColumnRenamed('constructorId', 'constructor_id') \
                                 .withColumnRenamed('positionText', 'position_text') \
                                 .withColumnRenamed('positionOrder', 'position_order') \
                                 .withColumnRenamed('fastestLap', 'fastest_lap') \
