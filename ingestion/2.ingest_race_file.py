@@ -73,4 +73,4 @@ races_selected_df.write.mode('overwrite').partitionBy('race_year').parquet('/mnt
 
 # COMMAND ----------
 
-
+dbutils.notebook.exit("Success")

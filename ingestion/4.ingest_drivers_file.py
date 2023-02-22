@@ -63,4 +63,4 @@ drivers_final_df.write.mode("overwrite").parquet("/mnt/saformuladl/processed/dri
 
 # COMMAND ----------
 
-
+dbutils.notebook.exit("Success")

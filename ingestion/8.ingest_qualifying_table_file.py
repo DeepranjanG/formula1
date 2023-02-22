@@ -50,4 +50,4 @@ qualifying_table_final_df.write.mode("overwrite").parquet("/mnt/saformuladl/proc
 
 # COMMAND ----------
 
-
+dbutils.notebook.exit("Success")

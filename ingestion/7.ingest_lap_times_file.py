@@ -44,4 +44,4 @@ lap_times_renamed_df.write.mode("overwrite").parquet("/mnt/saformuladl/processed
 
 # COMMAND ----------
 
-
+dbutils.notebook.exit("Success")

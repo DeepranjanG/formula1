@@ -47,4 +47,4 @@ spark
 
 # COMMAND ----------
 
-
+dbutils.notebook.exit("Success")
